@@ -1,0 +1,23 @@
+METHOD RK4
+
+STARTTIME = 1
+STOPTIME = 60
+DT = 1
+d/dt(E)=-(1-p)*w*E-p*w1*E;
+d/dt(I)=(1-p)*w*E-I*g;
+d/dt(A)=p*w1*E-g1*A;
+d/dt(R)=I*g +g1*A;
+
+init E=11.04;
+init I=25.14;
+init A=6.17;
+init R=7.26;
+
+b=0.00105;
+k=0.5;
+w=0.53;
+w1=0.83;
+g=0.23;
+g1=0.24;
+p=0.14;
+
